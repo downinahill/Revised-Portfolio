@@ -42,11 +42,14 @@ export const skills = [
 
     "CSS frameworks",
     "JavaScript",
-    "React",
+    "React.js",
     "Python",
-    "Node",
-    "Express",
-    "MongoDB"
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "Git/GitHub",
+    "Heroku",
+    "Redux",
   
   ];
   

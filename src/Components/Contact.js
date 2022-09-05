@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useState} from "react";
+import { useForm } from 'react-hook-form';
+import emailjs from 'emailjs-com'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.min.css';
 
 export default function Contact() {
-    const [name, setName] = React.useState("");
-    const [email, setEmail] = React.useState("");
-    const [message, setMessage] = React.useState("");
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [message, setMessage] = useState("");
 
     function encode(data) {
         return Object.keys(data)
@@ -12,6 +16,8 @@ export default function Contact() {
             )
             .join("&");
     }
+
+  
 
     function handleSubmit(e) {
         e.preventDefault();
@@ -23,6 +29,48 @@ export default function Contact() {
             .then(() => alert("Message sent!"))
             .catch((error) => alert(error));
     }
+
+    const toastifySuccess = () => {
+        toast('Form sent!', {
+          position: 'bottom-right',
+          autoClose: 5000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,  
+          draggable: false,
+          className: 'submit-feedback success',
+          toastId: 'notifyToast'
+        });
+      };
+
+      const {
+        register,
+        // handleSubmit,
+        reset,
+        formState: { errors }
+      } = useForm();
+
+    const onSubmit = async (data) => {
+        const { name, email, subject, message } = data;
+        try {
+          const templateParams = {
+            name,
+            email,
+            subject,
+            message
+          };
+          await emailjs.send(
+            process.env.REACT_APP_SERVICE_ID,
+            process.env.REACT_APP_TEMPLATE_ID,
+            templateParams,
+            process.env.REACT_APP_USER_ID
+          );
+          reset();
+        toastifySuccess()
+        } catch (e) {
+          console.log(e);
+        }
+      };
     return (
         <section id="contact" className="relative">
             <div className="container px-5 py-10 mx-auto flex sm:flex-nowrap flex-wrap">
@@ -36,16 +84,16 @@ export default function Contact() {
                         marginHeight={0}
                         marginWidth={0}
                         style={{ filter: "opacity(0.7)" }}
-                        src="https://www.google.com/maps/embed/v1/place?q=6130+Sandstone+Ct+Clifton+Virginia&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
+                        src="https://www.google.com/maps/embed/v1/place?q=&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
                     />
-                    <div className="bg-gray-900 relative flex flex-wrap py-6 rounded shadow-md">
+                    <div className="bg-gray relative flex flex-wrap py-6 rounded shadow-md">
                         <div className="lg:w-1/2 px-6">
                             <h2 className="title-font font-semibold text-white tracking-widest text-xs">
-                                ADDRESS
+                                {/* ADDRESS */}
                             </h2>
                             <p className="mt-1">
-                                6130 Sandstone Ct. <br />
-                                Clifton, VA 20124
+                                {/* 6130 Sandstone Ct. <br />
+                                Clifton, VA 20124 */}
                             </p>
                         </div>
                         <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
@@ -55,10 +103,10 @@ export default function Contact() {
                             <a href="#email" className="text-indigo-400 leading-relaxed">
                                 brian.hill.0023@gmail.com
                             </a>
-                            <h2 className="title-font font-semibold text-white tracking-widest text-xs mt-4">
+                            {/* <h2 className="title-font font-semibold text-white tracking-widest text-xs mt-4">
                                 PHONE
                             </h2>
-                            <p className="leading-relaxed">571-361-6231</p>
+                            <p className="leading-relaxed text-white">571-361-6231</p> */}
                         </div>
                     </div>
                 </div>
@@ -111,6 +159,7 @@ export default function Contact() {
                         />
                     </div>
                     <button
+                    onChange={onSubmit}
                         type="submit"
                         className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
                         Submit
