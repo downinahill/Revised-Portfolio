@@ -1614,10 +1614,10 @@
     "enabled" "2.0.x"
     "kuler" "^2.0.0"
 
-"@emailjs/browser@^3.6.2":
-  "integrity" "sha512-Swc8w+vwDX4XPy6tPegOFGSwHqNiEmEsIKbtAkqHo2WqnS0ORZUnnuZats2R3XqwfxNQD0F6RwnlVWHIMf6sCQ=="
-  "resolved" "https://registry.npmjs.org/@emailjs/browser/-/browser-3.6.2.tgz"
-  "version" "3.6.2"
+"@emailjs/browser@^3.10.0":
+  "integrity" "sha512-pregUOBkSjjctQoAgn8DcSaeY4ypHjXAJEzWlJysM3RkQXw1ulavfHva3YYeAkxfJ7qbIhpyvRmhyQlgNG4GVg=="
+  "resolved" "https://registry.npmjs.org/@emailjs/browser/-/browser-3.10.0.tgz"
+  "version" "3.10.0"
 
 "@eslint/eslintrc@^1.3.0":
   "integrity" "sha512-UWW0TMTmk2d7hLcWD1/e2g5HDM/HQ3csaLSqXCfqwh4uNDuNqlaKWXmEsL4Cs41Z0KnILNvwbHAah3C2yt06kw=="
@@ -1633,6 +1633,23 @@
     "js-yaml" "^4.1.0"
     "minimatch" "^3.1.2"
     "strip-json-comments" "^3.1.1"
+
+"@fortawesome/fontawesome-common-types@6.2.1":
+  "integrity" "sha512-Sz07mnQrTekFWLz5BMjOzHl/+NooTdW8F8kDQxjWwbpOJcnoSg4vUDng8d/WR1wOxM0O+CY9Zw0nR054riNYtQ=="
+  "resolved" "https://registry.npmjs.org/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-6.2.1.tgz"
+  "version" "6.2.1"
+
+"@fortawesome/fontawesome-free@^5.12.1":
+  "integrity" "sha512-eYm8vijH/hpzr/6/1CJ/V/Eb1xQFW2nnUKArb3z+yUWv7HTwj6M7SP957oMjfZjAHU6qpoNc2wQvIxBLWYa/Jg=="
+  "resolved" "https://registry.npmjs.org/@fortawesome/fontawesome-free/-/fontawesome-free-5.15.4.tgz"
+  "version" "5.15.4"
+
+"@fortawesome/fontawesome-svg-core@^6.2.1":
+  "integrity" "sha512-HELwwbCz6C1XEcjzyT1Jugmz2NNklMrSPjZOWMlc+ZsHIVk+XOvOXLGGQtFBwSyqfJDNgRq4xBCwWOaZ/d9DEA=="
+  "resolved" "https://registry.npmjs.org/@fortawesome/fontawesome-svg-core/-/fontawesome-svg-core-6.2.1.tgz"
+  "version" "6.2.1"
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "6.2.1"
 
 "@heroicons/react@^1.0.6":
   "integrity" "sha512-JJCXydOFWMDpCP4q13iEplA503MQO3xLoZiKum+955ZCtHINWnx26CUxVxxFQu/uLb4LW3ge15ZpzIkXKkJ8oQ=="
@@ -5177,7 +5194,7 @@
   optionalDependencies:
     "fsevents" "~2.3.2"
 
-"chokidar@^3.3.0", "chokidar@^3.4.2", "chokidar@^3.5.3":
+"chokidar@^3.3.0", "chokidar@^3.4.2", "chokidar@^3.5.3", "chokidar@>=3.0.0 <4.0.0":
   "integrity" "sha512-Dr3sfKRP6oTcjf2JmUmFJfeVMvXBdegxB0iVQ5eb2V10uFJUCAS8OByZdVAyVb8xXNz3GjjTgj9kLWsZTqE6kw=="
   "resolved" "https://registry.npmjs.org/chokidar/-/chokidar-3.5.3.tgz"
   "version" "3.5.3"
@@ -8129,6 +8146,14 @@
   "resolved" "https://registry.npmjs.org/extsprintf/-/extsprintf-1.3.0.tgz"
   "version" "1.3.0"
 
+"fa-icons@^0.2.0":
+  "integrity" "sha512-HxGOWM8gpYiilRnsOykLNyt65aC+pmJ2ulxGaWvDRsLWU9DzvN8zNoz6EIlRKJ7ytvvqpOORhxIYRndaKn36nA=="
+  "resolved" "https://registry.npmjs.org/fa-icons/-/fa-icons-0.2.0.tgz"
+  "version" "0.2.0"
+  dependencies:
+    "@fortawesome/fontawesome-free" "^5.12.1"
+    "lit-element" "^2.2.1"
+
 "fast-deep-equal@^2.0.1":
   "integrity" "sha1-ewUhjd+WZ79/Nwv3/bLLFf3Qqkk="
   "resolved" "https://registry.npmjs.org/fast-deep-equal/-/fast-deep-equal-2.0.1.tgz"
@@ -8534,6 +8559,11 @@
   "integrity" "sha512-aExlJShTV4qOUOL7yF1U5tvLCB0xQuudbf6toyYA0E/acBNw71mvjFTnLaRp50aQaYocMR0a/RMMBIHeZnGyjQ=="
   "resolved" "https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.15.0.tgz"
   "version" "1.15.0"
+
+"font-awesome@^4.7.0":
+  "integrity" "sha512-U6kGnykA/6bFmg1M/oT9EkFeIYv7JlX3bozwQJWiiLz6L0w3F5vBVPxHlwyX/vtNq1ckcpRKOB9f2Qal/VtFpg=="
+  "resolved" "https://registry.npmjs.org/font-awesome/-/font-awesome-4.7.0.tgz"
+  "version" "4.7.0"
 
 "for-in@^1.0.2":
   "integrity" "sha1-gQaNKVqBQuwKxybG4iAMMPttXoA="
@@ -9717,6 +9747,11 @@
   "integrity" "sha512-ubBeqQutOSLIFCUBN03jGeOS6a3DoYlSYwYJTa+gSKEZKU5redJIqkIdZ3JVv/4RZpfcXdAWH5zCNLWPRv2WDw=="
   "resolved" "https://registry.npmjs.org/immer/-/immer-9.0.14.tgz"
   "version" "9.0.14"
+
+"immutable@^4.0.0":
+  "integrity" "sha512-fTMKDwtbvO5tldky9QZ2fMX7slR0mYpY5nbnFWYp0fOzDhHqhgIw9KoYgxLWsoNTS9ZHGauHj18DTyEw6BK3Og=="
+  "resolved" "https://registry.npmjs.org/immutable/-/immutable-4.2.2.tgz"
+  "version" "4.2.2"
 
 "import-fresh@^3.0.0", "import-fresh@^3.1.0", "import-fresh@^3.2.1":
   "integrity" "sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw=="
@@ -11485,6 +11520,18 @@
     "listr-verbose-renderer" "^0.5.0"
     "p-map" "^2.0.0"
     "rxjs" "^6.3.3"
+
+"lit-element@^2.2.1":
+  "integrity" "sha512-ogu7PiJTA33bEK0xGu1dmaX5vhcRjBXCFexPja0e7P7jqLhTpNKYRPmE+GmiCaRVAbiQKGkUgkh/i6+bh++dPQ=="
+  "resolved" "https://registry.npmjs.org/lit-element/-/lit-element-2.5.1.tgz"
+  "version" "2.5.1"
+  dependencies:
+    "lit-html" "^1.1.1"
+
+"lit-html@^1.1.1":
+  "integrity" "sha512-B9btcSgPYb1q4oSOb/PrOT6Z/H+r6xuNzfH4lFli/AWhYwdtrgQkQWBbIc6mdnf6E2IL3gDXdkkqNktpU0OZQA=="
+  "resolved" "https://registry.npmjs.org/lit-html/-/lit-html-1.4.1.tgz"
+  "version" "1.4.1"
 
 "load-json-file@^4.0.0":
   "integrity" "sha512-Kx8hMakjX03tiGTLAIdJ+lL0htKnXjEZN6hk/tozf/WOuYGdZBJrZ+rCJRbVCugsjB3jMLn9746NsQIf5VjBMw=="
@@ -15609,6 +15656,15 @@
     "klona" "^2.0.4"
     "neo-async" "^2.6.2"
 
+"sass@^1.57.1":
+  "integrity" "sha512-O2+LwLS79op7GI0xZ8fqzF7X2m/m8WFfI02dHOdsK5R2ECeS5F62zrwg/relM1rjSLy7Vd/DiMNIvPrQGsA0jw=="
+  "resolved" "https://registry.npmjs.org/sass/-/sass-1.57.1.tgz"
+  "version" "1.57.1"
+  dependencies:
+    "chokidar" ">=3.0.0 <4.0.0"
+    "immutable" "^4.0.0"
+    "source-map-js" ">=0.6.2 <2.0.0"
+
 "sax@~1.2.4":
   "integrity" "sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw=="
   "resolved" "https://registry.npmjs.org/sax/-/sax-1.2.4.tgz"
@@ -16037,7 +16093,7 @@
   "resolved" "https://registry.npmjs.org/source-list-map/-/source-list-map-2.0.1.tgz"
   "version" "2.0.1"
 
-"source-map-js@^1.0.1", "source-map-js@^1.0.2":
+"source-map-js@^1.0.1", "source-map-js@^1.0.2", "source-map-js@>=0.6.2 <2.0.0":
   "integrity" "sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw=="
   "resolved" "https://registry.npmjs.org/source-map-js/-/source-map-js-1.0.2.tgz"
   "version" "1.0.2"
